@@ -1,0 +1,661 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #111111;
+}
+
+.encabezado {
+    background-color: #111111;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.marca h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.marca p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #cccccc;
+}
+
+.contenido {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.documentos {
+    background-color: white;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tarjeta:last-child {
+    border-bottom: none;
+}
+
+.tarjeta h3 {
+    margin: 0 0 5px 0;
+}
+
+.tarjeta p {
+    margin: 0;
+    color: #666666;
+}
+
+.boton {
+    display: inline-block;
+    border: none;
+    border-radius: 6px;
+    padding: 11px 22px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton-principal {
+    background-color: #111111;
+    color: white;
+}
+
+.boton-principal:hover {
+    background-color: #333333;
+}
+
+.boton-deshabilitado {
+    background-color: #dddddd;
+    color: #888888;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .tarjeta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .boton {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* =============================
+   PANELES
+   ============================= */
+
+.panel {
+    background-color: #ffffff;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+}
+
+
+.panel h2 {
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+
+/* =============================
+   FORMULARIOS
+   ============================= */
+
+.grupo-formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin-bottom: 18px;
+}
+
+
+.grupo-formulario label {
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.grupo-formulario input {
+    width: 100%;
+
+    padding: 11px;
+
+    border: 1px solid #cccccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+.grupo-formulario input:focus {
+    outline: none;
+
+    border-color: #111111;
+}
+
+
+.fila-formulario {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =============================
+   TABLA
+   ============================= */
+
+.tabla-contenedor {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+th,
+td {
+    padding: 12px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+th {
+    background-color: #111111;
+
+    color: #ffffff;
+}
+
+
+.tabla-vacia td {
+    text-align: center;
+
+    color: #777777;
+
+    padding: 30px;
+}
+
+
+/* =============================
+   IDIOMA
+   ============================= */
+
+.selector-idioma {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 15px;
+}
+
+
+.selector-idioma label {
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+.texto-secundario {
+    color: #666666;
+}
+
+
+/* =============================
+   ACCIONES
+   ============================= */
+
+.acciones-proforma {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    margin-bottom: 40px;
+}
+
+
+.boton-secundario {
+    background-color: #eeeeee;
+
+    color: #111111;
+}
+
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+
+@media (max-width: 700px) {
+
+    .fila-formulario {
+        grid-template-columns: 1fr;
+    }
+
+
+    .selector-idioma {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+
+    .acciones-proforma {
+        flex-direction: column;
+    }
+
+
+    .acciones-proforma .boton {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+/* =============================
+   TOTALES
+   ============================= */
+
+.resumen-totales {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 20px;
+
+    margin-top: 10px;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+.resumen-totales p {
+
+    margin: 0;
+
+    font-size: 16px;
+}
+
+
+/* =============================
+   ACCIONES DE TABLA
+   ============================= */
+
+.acciones-tabla {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.boton-editar,
+.boton-eliminar {
+
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 7px 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.boton-editar {
+
+    background-color: #111111;
+
+    color: white;
+}
+
+
+.boton-editar:hover {
+
+    background-color: #333333;
+}
+
+
+.boton-eliminar {
+
+    background-color: #eeeeee;
+
+    color: #111111;
+}
+
+
+.boton-eliminar:hover {
+
+    background-color: #dddddd;
+}
+
+
+.boton-eliminar:hover {
+
+    background-color: #dddddd;
+}
+
+
+/* =============================
+   RESPONSIVE TOTALES
+   ============================= */
+
+@media (max-width: 600px) {
+
+    .resumen-totales {
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+}
+/* =============================
+   COLORES ADICIONALES
+   ============================= */
+
+.seccion-colores {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+.opciones-horizontal {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+
+.opciones-horizontal label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.configuracion-colores {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background-color: #f7f7f7;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+}
+
+
+.oculto {
+    display: none;
+}
+
+
+.fila-configuracion-colores {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 15px;
+}
+
+
+.fila-configuracion-colores
+.grupo-formulario {
+    flex: 1;
+}
+
+
+.campos-variantes {
+    margin-top: 20px;
+}
+
+
+.variante-color {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+
+.cantidades-individuales {
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #dddddd;
+}
+
+
+@media (max-width: 700px) {
+
+    .fila-configuracion-colores {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .variante-color {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =============================
+   MODAL DE REVISIÓN
+   ============================= */
+
+.modal {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color:
+        rgba(0, 0, 0, 0.55);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 1000;
+}
+
+
+.modal.oculto {
+
+    display: none;
+}
+
+
+.modal-contenido {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    padding: 25px;
+}
+
+
+.modal-encabezado {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.modal-encabezado h2 {
+
+    margin: 0;
+}
+
+
+.boton-cerrar {
+
+    border: none;
+
+    background: none;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    color: #555555;
+}
+
+
+.revision-datos {
+
+    margin-bottom: 20px;
+}
+
+
+.revision-datos p {
+
+    margin: 7px 0;
+}
+
+
+.revision-totales {
+
+    margin-top: 20px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid #dddddd;
+
+    text-align: right;
+}
+
+
+.revision-totales p {
+
+    margin: 8px 0;
+}
+
+
+.revision-total-final {
+
+    font-size: 20px;
+}
+
+
+.modal-acciones {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 15px;
+
+    margin-top: 25px;
+}
+
+
+@media (max-width: 600px) {
+
+    .modal-acciones {
+
+        flex-direction: column;
+    }
+
+
+    .modal-acciones .boton {
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
